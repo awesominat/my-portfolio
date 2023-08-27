@@ -1,0 +1,4 @@
+{
+    "javascript.suggest.completeFunctionCalls": true,
+    "emmet.includeLanguages": { "javascript": "javascriptreact" }
+}
