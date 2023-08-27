@@ -1,0 +1,43 @@
+.navitem {
+  text-decoration: none;
+  padding-left: 16px;
+  color: black;
+
+  transition: all 200ms ease;
+  padding: 10px 10px 8px;
+  /* width: 50%; */
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.navitem.selected {
+  /* color: rgb(70, 221, 255); */
+  background: #fff;
+  color: #333;
+  pointer-events: none;
+}
+
+body {
+  margin: 0px;
+}
+
+/* .navbar.home {
+  background-color: #BD4F6C;
+}
+.navbar.about {
+  background-color: #D7816A;
+}
+.navbar.portfolio {
+  background-color: #F0CF65;
+} */
+
+.navbar {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  min-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

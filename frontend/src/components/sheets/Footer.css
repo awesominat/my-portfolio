@@ -1,0 +1,28 @@
+.footerbar p {
+    text-decoration: none;
+    padding-left: 16px;
+    color: rgb(255, 255, 255);
+  }
+  
+  /* .footerbar.home {
+    background-color: #BD4F6C;
+  }
+  .footerbar.about {
+    background-color: #D7816A;
+  }
+  .footerbar.portfolio {
+    background-color: #F0CF65;
+  } */
+  
+  .footerbar {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    min-height: 60px;
+    position: fixed;
+    bottom: 0;
+  
+    display: flex;
+    justify-content: flex;
+    align-items: center;
+  }
