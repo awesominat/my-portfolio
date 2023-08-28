@@ -16,16 +16,20 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '20'  # or your desired Node version
+          node-version: '20'
 
       - name: Install Dependencies
-        run: cd frontend && npm install  # navigate to your frontend folder
+        run: cd frontend && npm install
 
       # - name: Run Tests
       #   run: cd frontend && npm test
 
       - name: Create Production Build
         run: cd frontend && npm run build
+
+  deploy:
+      - name: Install Dependencies
+        run: cd backend && npm install
 
       - name: Deploy
         run: cd backend && npm run-script deploy
