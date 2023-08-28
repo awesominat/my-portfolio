@@ -11,6 +11,7 @@ app.use(express.json())
 
 app.get('/', (req, res) => {
     console.log('here')
+    res.send('talked to server')
 })
 
 app.use('/portfolio', portfolio)
@@ -25,8 +26,8 @@ app.get('/portfolio/:id', (req, res) => {
 
 mongoose.connect(process.env.MONG_URI)
     .then(() => {
-        app.listen(3001, 'localhost', () => {
-            console.log('listening on port', 3001)
+        app.listen(process.env.PORT, 'localhost', () => {
+            console.log('listening on port', process.env.PORT)
         })
     })
     .catch((err) => {
