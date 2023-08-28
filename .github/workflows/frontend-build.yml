@@ -56,5 +56,10 @@ jobs:
           echo "Host *" >> ~/.ssh/config
           echo "  StrictHostKeyChecking no" >> ~/.ssh/config
 
+      - name: Transfer build to remote server
+        run: |
+          rsync -avz -e 'ssh -o StrictHostKeyChecking=no' frontend/build/ ubuntu@${{ secrets.EC2_IP }}:/var/www/portfolio/build/
+
       - name: Deploy
         run: cd backend && npm run-script deploy
+
