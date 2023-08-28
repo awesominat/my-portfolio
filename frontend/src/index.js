@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Portfolio from './components/Portfolio'
 import About from './components/About';
 
+console.log('RUNNING FRONTEND')
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
