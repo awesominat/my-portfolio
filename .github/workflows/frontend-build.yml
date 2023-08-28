@@ -27,6 +27,9 @@ jobs:
       - name: Create Production Build
         run: cd frontend && npm run build
 
+      - name: List build directory
+        run: ls -la frontend/build
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
