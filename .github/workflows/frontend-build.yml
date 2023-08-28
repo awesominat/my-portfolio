@@ -1,0 +1,28 @@
+name: Frontend Build
+
+on:
+  push:
+    branches:
+      - main  # or your default branch name
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'  # or your desired Node version
+
+      - name: Install Dependencies
+        run: cd frontend && npm install  # navigate to your frontend folder
+
+      # - name: Run Tests
+      #   run: cd frontend && npm test
+
+      - name: Create Production Build
+        run: cd frontend && npm run build
