@@ -1,9 +1,9 @@
-name: Frontend Build
+name: Frontend Build and EC2 Deploy
 
 on:
   push:
     branches:
-      - main  # or your default branch name
+      - main
 
 jobs:
   build:
@@ -28,7 +28,19 @@ jobs:
         run: cd frontend && npm run build
 
   deploy:
-      - name: Install Dependencies
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+
+      - name: Install Backend Dependencies
         run: cd backend && npm install
 
       - name: Deploy
