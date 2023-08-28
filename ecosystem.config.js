@@ -1,12 +1,9 @@
 module.exports = {
   apps : [{
-    script: 'backend/index.js',
+    script: 'index.js',
     watch: '.',
     error_file: "/home/ubuntu/portfolio",
     out_file: "/home/ubuntu/portfolio"
-  }, {
-    script: './service-worker/',
-    watch: ['./service-worker']
   }],
 
   deploy : {
