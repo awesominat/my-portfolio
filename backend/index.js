@@ -17,9 +17,9 @@ app.get('/', (req, res, next) => {
     // next()
 })
 
-app.use('/portfolio', portfolio)
+app.use('/api/portfolio', portfolio)
 
-app.get('/portfolio/:id', (req, res) => {
+app.get('/api/portfolio/:id', (req, res) => {
     const { id } = req.params
     
     if (!mongoose.Types.ObjectId.isValid(id)) {

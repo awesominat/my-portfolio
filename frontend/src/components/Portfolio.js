@@ -10,7 +10,7 @@ function Portfolio() {
     document.body.style.overflow = "auto";
     useEffect(() => {
         const fetchPortfolioEntries = async () => {
-            const response = await fetch('/portfolio')
+            const response = await fetch('/api/portfolio')
             if (response.ok) {
                 var json = await response.json()
                 json.sort((a, b) => b.creationdate - a.creationdate);

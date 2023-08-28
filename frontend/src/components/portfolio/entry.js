@@ -21,7 +21,6 @@ const PortfolioEntry = ({ entry }) => {
     var href = '#'
     var title = ''
     entry.pname.split('\n').forEach((portion, index) => {
-        console.log(index, portion)
         if (index === 1) {
             href = portion
         } else {
