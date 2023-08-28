@@ -4,9 +4,6 @@ module.exports = {
     watch: '.',
     error_file: "/home/ubuntu/portfolio/error.log",
     out_file: "/home/ubuntu/portfolio/output.log"
-  }, {
-    script: '/home/ubuntu/portfolio/source/frontend/src/index.js',
-    watch: ['/home/ubuntu/portfolio/source/frontend']
   }],
 
   deploy : {
