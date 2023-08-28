@@ -21,6 +21,11 @@ jobs:
       - name: Install Dependencies
         run: cd frontend && npm install
 
+      - name: Setup ssh-agent
+        uses: webfactory/ssh-agent@v0.8.0
+        with:
+          ssh-private-key: ${{ secrets.DEPLOY_SSH_KEY }}
+
       # - name: Run Tests
       #   run: cd frontend && npm test
 
