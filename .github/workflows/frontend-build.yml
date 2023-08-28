@@ -27,6 +27,12 @@ jobs:
       - name: Create Production Build
         run: cd frontend && npm run build
 
+      - name: Upload build directory
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-artifact
+          path: frontend/build/
+
       - name: List build directory
         run: ls -la frontend/build
 
@@ -55,6 +61,12 @@ jobs:
         run: |
           echo "Host *" >> ~/.ssh/config
           echo "  StrictHostKeyChecking no" >> ~/.ssh/config
+
+      - name: Download build directory
+        uses: actions/download-artifact@v2
+        with:
+          name: build-artifact
+          path: frontend/build/
 
       - name: Transfer build to remote server
         run: |
