@@ -14,7 +14,8 @@ module.exports = {
       repo : 'git@github.com:awesominat/my-portfolio.git',
       path : '/home/ubuntu/portfolio',
       'pre-deploy-local': '',
-      'post-deploy' : 'rm -rf frontend/ && rm -rf controllers models routes && mv backend/* ./ && npm install && rm -rf backend/ && pm2 reload ecosystem.config.js --env production',
+      'post-deploy' : 'rm -rf frontend/ && rm -rf controllers models routes && mv backend/controllers backend/hash_pass.js backend/index.js backend/models backend/package-lock.json backend/package.json backend/routes backend/skills_to_json.js ./ && npm install && rm -rf backend/ && pm2 reload ecosystem.config.js --env production',
+      // 'post-deploy' : 'rm -rf frontend/ && rm -rf controllers models routes && mv backend/* ./ && npm install && rm -rf backend/ && pm2 reload ecosystem.config.js --env production',
       // 'post-deploy' : 'rm -rf frontend/ && rm -rf controllers models routes && mv backend/* ./ && npm install && pm2 reload ecosystem.config.js --env production',
       // 'post-deploy' : 'rm -rf frontend/ && rm -rf controllers models routes && mv backend/* ./ && npm install && rm -rf backend/ && pm2 reload ecosystem.config.js --env production',
       'pre-setup': ''
