@@ -1,9 +1,9 @@
 module.exports = {
   apps : [{
-    script: 'index.js',
+    script: '/home/ubuntu/portfolio/source/index.js',
     watch: '.',
-    error_file: "/home/ubuntu/portfolio",
-    out_file: "/home/ubuntu/portfolio"
+    error_file: "/home/ubuntu/portfolio/error.log",
+    out_file: "/home/ubuntu/portfolio/output.log"
   }],
 
   deploy : {
@@ -14,8 +14,8 @@ module.exports = {
       repo : 'git@github.com:awesominat/my-portfolio.git',
       path : '/home/ubuntu/portfolio',
       'pre-deploy-local': '',
-      'post-deploy' : '    rm -rf frontend/ && rm -rf controllers models routes && mv backend/* ./ && mv backend/.* ./ 2>/dev/null || true && npm install && rm -rf backend/ && pm2 reload ecosystem.config.js --env production',
-      // 'post-deploy' : 'cd backend && npm install && pm2 reload ecosystem.config.js --env production',
+      // 'post-deploy' : 'rm -rf frontend/ && rm -rf controllers models routes && mv backend/* ./ && npm install && pm2 reload ecosystem.config.js --env production',
+      'post-deploy' : 'rm -rf frontend/ && rm -rf controllers models routes && mv backend/* ./ && npm install && rm -rf backend/ && pm2 reload ecosystem.config.js --env production',
       'pre-setup': ''
     }
   }
