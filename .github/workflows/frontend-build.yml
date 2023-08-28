@@ -21,11 +21,6 @@ jobs:
       - name: Install Dependencies
         run: cd frontend && npm install
 
-      - name: Setup ssh-agent
-        uses: webfactory/ssh-agent@v0.8.0
-        with:
-          ssh-private-key: ${{ secrets.DEPLOY_SSH_KEY }}
-
       # - name: Run Tests
       #   run: cd frontend && npm test
 
@@ -47,6 +42,16 @@ jobs:
 
       - name: Install Backend Dependencies
         run: cd backend && npm install
+
+      - name: Setup SSH for EC2
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.EC2_SSH_PRIVATE_KEY }}
+
+      - name: Disable Host Key Checking
+        run: |
+          echo "Host *" >> ~/.ssh/config
+          echo "  StrictHostKeyChecking no" >> ~/.ssh/config
 
       - name: Deploy
         run: cd backend && npm run-script deploy
