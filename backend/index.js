@@ -25,8 +25,8 @@ app.get('/portfolio/:id', (req, res) => {
 
 mongoose.connect(process.env.MONG_URI)
     .then(() => {
-        app.listen(process.env.PORT, 'localhost', () => {
-            console.log('listening on port', process.env.PORT)
+        app.listen(3001, 'localhost', () => {
+            console.log('listening on port', 3001)
         })
     })
     .catch((err) => {
