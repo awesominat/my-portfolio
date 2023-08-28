@@ -12,13 +12,6 @@ function Footer({selected}) {
         e.preventDefault();
         window.open(my_linkedin, '_blank')
     }
-    const GetFooterbarContainer = () => {
-        if (selected != null) {
-            return 'footerbar ' + selected;
-        } else {
-            return 'footerbar';
-        }
-    }
     const openEmailClient = () => {
         const subject = 'Your Portfolio';
         const body = 'Hello, I wanted to get in touch with you.';

@@ -32,7 +32,7 @@ function About() {
 
                 <div className="profile-container">
 
-                    <img src="https://media.licdn.com/dms/image/D5603AQEpdCNpw2LAXg/profile-displayphoto-shrink_400_400/0/1676872565081?e=1698278400&v=beta&t=3kkkIRL6HCPwMVa8ASscPj2SckgoBHOB0R4f2mq0nmM" className="pfp" />
+                    <img src="https://media.licdn.com/dms/image/D5603AQEpdCNpw2LAXg/profile-displayphoto-shrink_400_400/0/1676872565081?e=1698278400&v=beta&t=3kkkIRL6HCPwMVa8ASscPj2SckgoBHOB0R4f2mq0nmM" alt="my face!" className="pfp" />
                     <div className="profile-textcontainer">
 
                         <p>

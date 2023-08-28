@@ -3,15 +3,18 @@ require('dotenv').config()
 const express = require('express')
 
 const mongoose = require('mongoose')
+const morgan = require('morgan')
 const app = express()
 
 const portfolio = require('./routes/portfolio')
 
 app.use(express.json())
+app.use(morgan('combined'))
 
-app.get('/', (req, res) => {
-    console.log('here')
+app.get('/', (req, res, next) => {
+    // console.log('here')
     res.send('talked to server')
+    // next()
 })
 
 app.use('/portfolio', portfolio)

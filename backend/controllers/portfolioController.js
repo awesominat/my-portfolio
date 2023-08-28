@@ -15,8 +15,7 @@ const AddPortfolioEntry = async (req, res) => {
         const entry = await portfolioSchema.create({hash, pname, content, created, creationdate, skills, finishdate})
         res.status(200).json({success: "good auth", entry})
     } catch (err) {
-        console.log('/portfolio post error', err)
-        return res.json({errmsg: err})
+        return res.status(400).json({errmsg: err})
     }
 }
 
@@ -38,8 +37,7 @@ const RemovePortfolioEntry = async (req, res) => {
         }
         res.status(200).json({success: "good auth", entry})
     } catch (err) {
-        console.log('/portfolio delete error', err)
-        return res.json({errmsg: err})
+        return res.status(400).json({errmsg: err})
     }
 }
 
@@ -60,13 +58,11 @@ const UpdatePortfolioEntry = async (req, res) => {
         }
         res.status(200).json({success: "good auth", entry})
     } catch (err) {
-        console.log('/portfolio patch error', err)
-        return res.json({errmsg: err})
+        return res.status(400).json({errmsg: err})
     }
 }
 
 const GetAllEntries = async (req, res) => {
-    console.log('requesting all entries')
     const entries = await portfolioSchema.find().sort({createdAt: -1})
     res.status(200).json(entries)
 }

@@ -7,6 +7,7 @@ import Footer from "./common/Footer";
 function Portfolio() {
     const [portfolios, updatePortfolios] = useState(null)
 
+    document.body.style.overflow = "auto";
     useEffect(() => {
         const fetchPortfolioEntries = async () => {
             const response = await fetch('/portfolio')

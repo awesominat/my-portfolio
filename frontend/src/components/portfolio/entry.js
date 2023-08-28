@@ -20,9 +20,9 @@ const PortfolioEntry = ({ entry }) => {
     ));
     var href = '#'
     var title = ''
-    entry.pname.split('\n').map((portion, index) => {
+    entry.pname.split('\n').forEach((portion, index) => {
         console.log(index, portion)
-        if (index == 1) {
+        if (index === 1) {
             href = portion
         } else {
             title = portion
@@ -43,7 +43,7 @@ const PortfolioEntry = ({ entry }) => {
                         <ul>
                             {skills && skills.map( (skill) => {
                                 counter++;
-                                return <li key={counter}><a>{skill}</a></li>
+                                return <li key={counter}><p>{skill}</p></li>
                             })}
                         </ul>
                     </div>

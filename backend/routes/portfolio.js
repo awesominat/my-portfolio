@@ -5,7 +5,6 @@ const router = express.Router()
 const { AddPortfolioEntry, GetAllEntries, GetSpecificEntry, RemovePortfolioEntry, UpdatePortfolioEntry } = require('../controllers/portfolioController')
 
 router.get('/', (req, res, next) => {
-    console.log('requested')
     next()
 })
 
