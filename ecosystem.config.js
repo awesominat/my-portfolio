@@ -1,17 +1,24 @@
 module.exports = {
-  apps: [{
-    name: 'portfolio',
-    script: './backend/index.js'
+  apps : [{
+    script: 'backend/index.js',
+    watch: '.',
+    error_file: "/home/ubuntu/portfolio",
+    out_file: "/home/ubuntu/portfolio"
+  }, {
+    script: './service-worker/',
+    watch: ['./service-worker']
   }],
-  deploy: {
-    production: {
-      user: 'ubuntu',
-      host: 'ec2-51-20-7-199.eu-north-1.compute.amazonaws.com',
-      key: '~/.ssh/capybara.pem',      
-      ref: 'origin/main',
-      repo: 'git@github.com:awesominat/my-portfolio.git',
-      path: '/home/ubuntu/portfolio',
-      'post-deploy': 'npm install && pm2 startOrRestart ecosystem.config.js'
+
+  deploy : {
+    production : {
+      user : 'ubuntu',
+      host : 'ec2-16-171-159-187.eu-north-1.compute.amazonaws.com',
+      ref  : 'origin/main',
+      repo : 'git@github.com:awesominat/my-portfolio.git',
+      path : '/home/ubuntu/portfolio',
+      'pre-deploy-local': '',
+      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',
+      'pre-setup': ''
     }
   }
-}
+};
