@@ -36,7 +36,7 @@ function About() {
                     <div className="profile-textcontainer">
 
                         <p>
-                            I'm a second-year student at the University of Toronto, pursuing a Computer Science Specialist with minors in Math and Statistics. My passion lies in Software Engineering and Machine Learning, fields that I've dedicated significant time to practing and learning.
+                            I'm a second-year student at the University of Toronto, pursuing a Computer Science Specialist with minors in Math and Statistics. My passion lies in Software Engineering and Machine Learning, fields that I've dedicated significant time to practicing and learning.
                         </p> <br /><p>
                             With 8+ years of game development experience, I've contributed to crafting top 50 Roblox games with an average of 1.5 million daily active users. Collaborating with YouTubers, I've supported the creation of 72 videos totaling a remarkable 902 million views. This journey has honed my skills in Git, Lua, SCRUM, SQL, JS, Web hosting, Rust, C#, and Python. </p> <br /> <p>
 
