@@ -9,7 +9,7 @@ module.exports = {
   deploy : {
     production : {
       user : 'ubuntu',
-      host : 'ec2-16-171-159-187.eu-north-1.compute.amazonaws.com',
+      host : process.env.HOSTEC,
       ref  : 'origin/main',
       repo : 'git@github.com:awesominat/my-portfolio.git',
       path : '/home/ubuntu/portfolio',

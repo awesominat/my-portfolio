@@ -53,7 +53,19 @@ function About() {
 
                     <div className="entry">
                         <p className="position">
-                            Project Assistant
+                            Machine Learning Engineer
+                        </p> <br />
+                        <p className="company-location">
+                            <span className="company">Pardee Lab</span> • Toronto, ON, Canada
+                        </p> <br />
+                        <p className="date">
+                            September 2023 – Present
+                        </p>
+                    </div>
+                    
+                    <div className="entry">
+                        <p className="position">
+                            Project Coordinator
                         </p> <br />
                         <p className="company-location">
                             <span className="company">Pardee Lab</span> • Toronto, ON, Canada

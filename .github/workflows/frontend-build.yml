@@ -68,10 +68,14 @@ jobs:
           name: build-artifact
           path: frontend/build/
 
+      - name: Set up environment variables from secrets
+        run: echo "HOSTEC=${{ secrets.EC2_HOST }}" >> $GITHUB_ENV
+
       - name: Transfer build to remote server
         run: |
           rsync -avz -e 'ssh -o StrictHostKeyChecking=no' frontend/build/ ubuntu@${{ secrets.EC2_IP }}:/var/www/portfolio/build/
 
       - name: Deploy
-        run: cd backend && npm run-script deploy
+        run: cd backend && HOSTEC=${{ secrets.EC2_HOST }} npm run-script deploy
+        # run: cd backend && npm run-script deploy
 
