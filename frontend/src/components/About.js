@@ -32,7 +32,7 @@ function About() {
 
                 <div className="profile-container">
 
-                    <img src="https://media.licdn.com/dms/image/D5603AQEpdCNpw2LAXg/profile-displayphoto-shrink_400_400/0/1676872565081?e=1698278400&v=beta&t=3kkkIRL6HCPwMVa8ASscPj2SckgoBHOB0R4f2mq0nmM" alt="my face!" className="pfp" />
+                    <img src="/icon.jpeg" alt="my face!" className="pfp" />
                     <div className="profile-textcontainer">
 
                         <p>
@@ -57,6 +57,28 @@ function About() {
                         </p> <br />
                         <p className="company-location">
                             <span className="company">Pardee Lab</span> • Toronto, ON, Canada
+                        </p> <br />
+                        <p className="date">
+                            September 2023 – Present
+                        </p>
+                    </div>
+                    <div className="entry">
+                        <p className="position">
+                            Frontend Engineer Tech Lead
+                        </p> <br />
+                        <p className="company-location">
+                            <span className="company">UTMIST</span>
+                        </p> <br />
+                        <p className="date">
+                            September 2023 – Present
+                        </p>
+                    </div>
+                    <div className="entry">
+                        <p className="position">
+                            Cloud Developer
+                        </p> <br />
+                        <p className="company-location">
+                            <span className="company">UTMIST</span>
                         </p> <br />
                         <p className="date">
                             September 2023 – Present
