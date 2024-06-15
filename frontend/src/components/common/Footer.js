@@ -3,7 +3,7 @@ import '../sheets/Footer.css'
 
 function Footer({selected}) {
     const my_github = "https://www.github.com/awesominat"
-    const my_linkedin = "https://www.linkedin.com/in/zain-alaabedeen-moustafa-483325251/"
+    const my_linkedin = "https://www.linkedin.com/in/zainmo/"
     const open_gh = (e) => {
       e.preventDefault();
       window.open(my_github, '_blank')
